@@ -11,14 +11,14 @@ run-name: OSSF ${{ inputs.id }}
 on:
   workflow_dispatch:
     inputs:
-      repo:
-        description: 'Repository to analyze (owner/repo or full URL)'
-        required: true
-        default: ''
-      id: 
-        description: 'Unique identifier for the workflow run (for tracking purposes)'
-        required: true
-        default: ''
+        target_validate_template_url:
+            description: "Repository to analyze (owner/repo or full URL)"
+            required: true
+            default: ""
+        run_id:
+            description: "Unique identifier for the workflow run (for tracking purposes)"
+            required: true
+            default: ""
 
 # read access is required for retrieving repository metadata if using the default GITHUB_TOKEN
 permissions:
